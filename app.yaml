@@ -1,0 +1,11 @@
+
+api_version: 1
+runtime: python27
+threadsafe: False
+
+handlers:
+- url: /.*
+  script: main.py
+  login: required #requires user to be logged in (Google/Yahoo)
+  secure: always # requires https url
+  redirect_http_response_code: 301 #IN case of error
